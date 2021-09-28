@@ -6,30 +6,38 @@ import { Link } from 'react-router-dom';
 const Pokedex = () => {
 
 const [pokemons, setPokemons] = useState([]);
+const [subPoke, setSubPoke] = useState({
+    sprites : {}
+})
 
-const URL = "https://pokefight-app.herokuapp.com/"
+const URL = "https://pokeapi.co/api/v2/pokemon"
 
 useEffect (() => {
-    getPokemons()
+    // getPokemons()
 }, [])
-console.log(pokemons);
+
+
 const getPokemons = async() => {
-    await axios.get(URL).then((response => setPokemons(response.data)))
+    await axios.get(URL).then((response => setPokemons(response.data.results)))
 }
+
+const getURL = (test) => {
+     axios.get(test)
+     .then(res  => console.log(res.data))
+
+
+}
+
+
+
+
+
+
 
     return (
         <div>
-           {pokemons.map(pokemon => {
-               return(
-                  <>
-                  <Link to={`/pokemon/${pokemon.id}`}>
-                   <h2>{pokemon.name.english}</h2>
-                  </Link>
-                 
-                  
-                  </>
-               )
-           })}
+           {pokemons.map(pokemon => getURL(pokemon.url))}
+           {}
         </div>
     )
 }
