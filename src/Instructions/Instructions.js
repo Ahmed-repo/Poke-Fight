@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../Components/Style/Instructions.css";
+import { Button } from "@mui/material";
 
 const Instructions = () => {
   return (
-    <div>
-      <h2>See the instructions under:</h2>
+    <div className="instructions">
+      <h2>See the instructions:</h2>
       <ol>
         <li>
           <p>
@@ -20,8 +23,8 @@ const Instructions = () => {
         <li>
           <p>
             After loggin in you get to click on the pokeball, this will lead you
-            to choose your pokemons. The opponent will choose their pokemon
-            automatically.
+            to choose your pokemons. <br />
+            The opponent will choose their pokemon automatically.
           </p>
         </li>
 
@@ -37,6 +40,10 @@ const Instructions = () => {
           </p>
         </li>
       </ol>
+
+      <Link to="/">
+        <Button>back to home</Button>
+      </Link>
     </div>
   );
 };

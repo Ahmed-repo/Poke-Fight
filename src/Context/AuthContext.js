@@ -47,7 +47,6 @@ export const AuthController = (props) => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
     logoutdata.preventDefault();
-
     history.push(`/`);
   };
 

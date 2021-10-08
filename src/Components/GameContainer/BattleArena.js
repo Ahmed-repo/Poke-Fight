@@ -35,8 +35,6 @@ function BattleArena() {
               style={{ width: "200px", height: "200px" }}
             />
 
-            <meter min="0" max="100" value={team[0].base.HP} />
-
             <Typography>{team[1].name.english}</Typography>
 
             <CardMedia
@@ -61,13 +59,13 @@ function BattleArena() {
           {enemyTeam ? (
             <div>
               <p>Enemy Team</p>
-              <meter min="0" max="100" value={fight} />
+
               <Typography>{enemyTeam[0].name.english}</Typography>
               <CardMedia
                 image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${enemyTeam[0].id}.png`}
                 style={{ width: "200px", height: "200px" }}
               />
-              <Progress value={team[1].base.HP} />
+
               <Typography>{enemyTeam[1].name.english}</Typography>
               <CardMedia
                 image={`https://projectpokemon.org/images/normal-sprite/${enemyTeam[1].name.english.toLowerCase()}.gif`}
@@ -92,14 +90,6 @@ function BattleArena() {
             history.push("/pokemon/choose");
             setTeam("");
           }}
-        >
-          New Game
-        </Button>
-        <Button
-          className="newgame"
-          variant="contained"
-          color="success"
-          onClick={handle}
         >
           New Game
         </Button>

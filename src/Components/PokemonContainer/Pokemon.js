@@ -209,8 +209,8 @@ const Pokemon = (props) => {
               <Grid item lg={4} xl={4}>
                 {loading1 ? (
                   <div className="pokeinfobox">
-                    <h3>More info on the Pokemon:</h3>
-                    <p>
+                    <h3 className="poketext">More info on the Pokemon:</h3>
+                    <p className="poketext">
                       {" "}
                       {pokemonDetails.flavor_text_entries[0].flavor_text ? (
                         pokemonDetails.flavor_text_entries[0].flavor_text
@@ -218,7 +218,7 @@ const Pokemon = (props) => {
                         <></>
                       )}
                     </p>
-                    <p>
+                    <p className="poketext">
                       Base happiness :{" "}
                       {pokemonDetails.base_happiness ? (
                         pokemonDetails.base_happiness

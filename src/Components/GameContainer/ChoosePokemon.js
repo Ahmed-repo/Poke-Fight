@@ -11,13 +11,17 @@ const ChoosePokemon = () => {
   const [enemyTeam, setEnemyTeam] = useContext(EnemyContext);
   return (
     <>
-      <h3>Choose three pokemons and click on start</h3>
-      <p>{team ? team.length : ""}</p>
-      <Link to="/pokemon/battle-arena">
-        <Typography>
-          <Button className="startbutton">Start</Button>
-        </Typography>
-      </Link>
+      <div className="choosepokebegin">
+        <h3>Choose three pokemons and click on start</h3>
+        <p>{team ? team.length : ""}</p>
+        <p>{team[0] ? team[0].name.englisch : ""}</p>
+
+        <Link to="/pokemon/battle-arena">
+          <Typography>
+            <Button className="startbutton">Start</Button>
+          </Typography>
+        </Link>
+      </div>
 
       <div className="choosePokemon">
         <PlayerWindow />
