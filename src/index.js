@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App.js';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from "react-router-dom";
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App.js";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { AuthController } from "./Context/AuthContext";
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
-    <App />
+    <BrowserRouter>
+      <AuthController>
+        <App />
+      </AuthController>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
 
 reportWebVitals();

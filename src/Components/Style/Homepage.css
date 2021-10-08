@@ -1,0 +1,25 @@
+#homepagecontainer {
+  background-color: #ffcc00;
+  height: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headers {
+  font-family: "Pokemon Solid Normal";
+  font-style: normal;
+  font-size: 50px;
+}
+
+.pokemonlogo {
+  width: 90vh;
+  height: 30vh;
+  padding: 40px 10px;
+}
+
+.pokeball {
+  width: 40vh;
+  height: 40vh;
+}

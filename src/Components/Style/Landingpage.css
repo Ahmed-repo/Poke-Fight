@@ -1,0 +1,5 @@
+.landingpagecontainer {
+  background-image: url(../assets/snowBall.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
